@@ -11,19 +11,15 @@ Before you begin, ensure you have the following installed:
 
 ## Installation
 
+Open Command Prompt, Windows Powershell, or a similar terminal to enter the following commands to install the bot:
+
 1. **Clone the Repository**: Start by cloning the bot's repository to your local machine.
 
     ```bash
     git clone <repository-url>
     ```
-
-2. **Navigate to the Project Directory**: Change your current directory to the project's root folder.
-
-    ```bash
-    cd <project-directory>
-    ```
-
-3. **Install Dependencies**: Install the required Node.js packages by running:
+    
+2. **Install Dependencies**: Install the required Node.js packages by running:
 
     ```bash
     npm install
@@ -40,7 +36,7 @@ You'll need to configure the bot before you can use it. Open `example-config.jso
 - `channels` - A list of channels to join. Keep in mind the usernames must be lowercase!
 - `color_set` - Choose from the `colors.json` list to find a color set to your liking, or create your own unique set of colors. Defaults to the standard Twitch colors. Keep in mind you must have Turbo or Prime to use anything other than the standard Twitch colors.
 
-Now, you must rename `example-config.json` to `config.json`
+Now, just rename `example-config.json` to `config.json`
 
 ## Usage
 
