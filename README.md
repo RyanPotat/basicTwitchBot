@@ -27,7 +27,13 @@ Open Command Prompt, Windows Powershell, or a similar terminal to enter the foll
 
 ## Configuration
 
-You'll need to configure the bot before you can use it. Open `example-config.json` and enter the following:
+You'll need to configure the bot before you can use it. Open `example-config.json`:
+
+```bash
+nano config.json
+```
+
+And then enter the following:
 
 - `id` - Your Twitch user ID.
 - `username` - Your Twitch user login. Remember it must be lowercase!
@@ -87,6 +93,34 @@ Once the installation and configuration are complete, you can start using the bo
 ```bash
 npm start
 ```
+Optionally you can use PM2 to run this process in the background, here's some basic instructions to set it up. First, run this code to install:
 
+```bash
+npm install -g pm2
+```
+
+Now if you are still in the same directory as the repository you just cloned, simply run:
+
+```bash
+pm2 start index.js
+```
+
+You can check the status of the application by running: 
+
+```bash
+pm2 list
+```
+
+And check logs with:
+
+```bash
+pm2 logs
+```
+
+To stop the application:
+
+```bash
+pm2 start index.js
+```
 
 
