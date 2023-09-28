@@ -30,7 +30,7 @@ Open Command Prompt, Windows Powershell, or a similar terminal to enter the foll
 You'll need to configure the bot before you can use it. Open `example-config.json`:
 
 ```bash
-nano config.json
+nano example-config.json
 ```
 
 And then enter the following:
