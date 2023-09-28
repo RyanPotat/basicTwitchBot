@@ -1,5 +1,5 @@
-import { client } from './src/client';
-import { changeColor } from './src/changeColor';
+import { client } from './src/client.js';
+import { changeColor } from './src/changeColor.js';
 import config from './config.json' assert { type: 'json' };
 
 /**

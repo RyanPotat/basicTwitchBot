@@ -1,5 +1,5 @@
-import config from './config.json' assert { type: 'json' };
-import colors from './colors.json' assert { type: 'json' };
+import config from '../config.json' assert { type: 'json' };
+import colors from '../colors.json' assert { type: 'json' };
 
 const hexToColor = {
   '#0000FF': 'blue',
@@ -26,12 +26,13 @@ export const changeColor = async (colorRaw) => {
   cooldown = true;
   const
     hexColor = config.color_set === 'twitch_basic'
-      ? hexToColor[colorRaw]
+      ? hexToColor[colorRaw] || config.color_set[0]
       : colorRaw;
   const colorArray = colors[config.color_set];
   const colorIndex = colorArray.findIndex((setColor) => setColor === hexColor);
   const finalIndex = colorIndex !== -1 ? colorIndex : 0;
   const newColor = colorArray[(finalIndex + 1) % colorArray.length];
+  console.log(newColor)
   try {
     const
       encodedColor = encodeURIComponent(newColor === null ? '#FF69B4' : newColor);
