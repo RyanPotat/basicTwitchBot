@@ -16,7 +16,7 @@ Open Command Prompt, Windows Powershell, or a similar terminal to enter the foll
 1. **Clone the Repository**: Start by cloning the bot's repository to your local machine.
 
     ```bash
-    git clone <repository-url>
+    git clone https://github.com/RyanPotat/basicTwitchBot.git
     ```
     
 2. **Install Dependencies**: Install the required Node.js packages by running:
