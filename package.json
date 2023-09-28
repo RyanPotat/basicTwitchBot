@@ -1,0 +1,23 @@
+{
+  "name": "colorchanger",
+  "type": "module",
+  "scripts": {
+    "start": "eslint ./ & node index.js",
+    "dev": "eslint ./ & nodemon index.js",
+    "lint": "eslint ./ & npx depcheck",
+    "lint:fix": "eslint ./ --fix"
+  },
+  "version": "1.0.0",
+  "description": "Change twitch chat color using Twitch API",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/eslint-parser": "^7.22.15",
+    "@babel/plugin-syntax-import-assertions": "^7.22.5",
+    "@kararty/dank-twitch-irc": "^6.0.0",
+    "eslint": "^8.50.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.28.1"
+  }
+}

@@ -1,0 +1,13 @@
+{
+    "id": "123456",
+    "username": "forsen",
+    "twitch_token": "https://twitchapps.com/tmi/",
+    "helix_id": "https://twitchtokengenerator.com/",
+    "helix_token": "https://twitchtokengenerator.com/",
+    "channels": [
+        "your_channel",
+        "forsen",
+        "xqc"
+    ],
+    "color_set": "twitch_basic"
+}
