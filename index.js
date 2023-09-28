@@ -13,6 +13,7 @@ import config from './config.json' assert { type: 'json' };
  * @property {string} senderUserID - Twitch id of message sender.
  * @property {string} senderUsername - Twitch login of message sender.
  * Reference of common properties you might want to use, not all.
+ * Further documentation:
  * https://robotty.github.io/dank-twitch-irc/classes/privmsgmessage.html
  */
 
@@ -40,4 +41,4 @@ setTimeout(() => {
 // example: farm cookies every 2 hours
 setTimeout(() => {
   client.say('<your_channel>', '!cookie');
-}, 24 * 60 * 60 * 1000);
+}, 2 * 60 * 60 * 1000);
