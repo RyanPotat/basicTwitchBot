@@ -1,6 +1,24 @@
 import config from './config.json' assert { type: 'json' };
 import colors from './colors.json' assert { type: 'json' };
 
+const hexToColor = {
+  '#0000FF': 'blue',
+  '#8A2BE2': 'blue_violet',
+  '#5F9EA0': 'cadet_blue',
+  '#D2691E': 'chocolate',
+  '#FF7F50': 'coral',
+  '#1E90FF': 'dodger_blue',
+  '#B22222': 'firebrick',
+  '#DAA520': 'golden_rod',
+  '#008000': 'green',
+  '#FF69B4': 'hot_pink',
+  '#FF4500': 'orange_red',
+  '#FF0000': 'red',
+  '#2E8B57': 'sea_green',
+  '#00FF7F': 'spring_green',
+  '#9ACD32': 'yellow_green'
+};
+
 let cooldown = false;
 // listen for your messages to trigger next color change
 export const changeColor = async (colorRaw) => {
@@ -8,7 +26,7 @@ export const changeColor = async (colorRaw) => {
   cooldown = true;
   const
     hexColor = config.color_set === 'twitch_basic'
-      ? colors.hexToColor[colorRaw]
+      ? hexToColor[colorRaw]
       : colorRaw;
   const colorArray = colors[config.color_set];
   const colorIndex = colorArray.findIndex((setColor) => setColor === hexColor);

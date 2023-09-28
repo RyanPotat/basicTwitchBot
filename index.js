@@ -14,7 +14,7 @@ import config from './config.json' assert { type: 'json' };
  * @property {string} senderUsername - Twitch login of message sender.
  * Reference of common properties you might want to use, not all.
  * https://robotty.github.io/dank-twitch-irc/classes/privmsgmessage.html
- */ 
+ */
 
 /** Twitch event listener for messages in joined chats.
  * @type {TwitchMessage}
