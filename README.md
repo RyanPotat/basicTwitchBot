@@ -99,7 +99,7 @@ pm2 logs
 To stop the application:
 
 ```bash
-pm2 start index.js
+pm2 stop index.js
 ```
 
 
