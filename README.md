@@ -40,6 +40,27 @@ You'll need to configure the bot before you can use it. Open `example-config.jso
 - `channels` - A list of channels to join. Keep in mind the usernames must be lowercase!
 - `color_set` - Choose from the `colors.json` list to find a color set to your liking, or create your own unique set of colors. Defaults to the standard Twitch colors. Keep in mind you must have Turbo or Prime to use anything other than the standard Twitch colors.
 
+Available color sets:
+1. twitch_basic
+2. pastels
+3. longPastels
+4. rainbow
+5. longRainbow
+6. earthTones
+7. neon
+8. grayscale
+9. coolBlues
+10. warmReds
+11. vibrantGreens
+12. deepPurples
+13. candyShop
+14. sunsetShades
+15. autumnTones
+16. oceanBlues
+17. burger
+18. christmas
+19. halloween
+
 Now, you must rename `example-config.json` to `config.json`
 
 ## Usage
