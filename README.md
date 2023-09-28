@@ -11,19 +11,15 @@ Before you begin, ensure you have the following installed:
 
 ## Installation
 
+Open Command Prompt, Windows Powershell, or a similar terminal to enter the following commands to install the bot:
+
 1. **Clone the Repository**: Start by cloning the bot's repository to your local machine.
 
     ```bash
-    git clone <repository-url>
+    git clone https://github.com/RyanPotat/basicTwitchBot.git
     ```
-
-2. **Navigate to the Project Directory**: Change your current directory to the project's root folder.
-
-    ```bash
-    cd <project-directory>
-    ```
-
-3. **Install Dependencies**: Install the required Node.js packages by running:
+    
+2. **Install Dependencies**: Install the required Node.js packages by running:
 
     ```bash
     npm install
@@ -61,7 +57,28 @@ Available color sets:
 18. christmas
 19. halloween
 
-Now, you must rename `example-config.json` to `config.json`
+Available color sets:
+1. twitch_basic
+2. pastels
+3. longPastels
+4. rainbow
+5. longRainbow
+6. earthTones
+7. neon
+8. grayscale
+9. coolBlues
+10. warmReds
+11. vibrantGreens
+12. deepPurples
+13. candyShop
+14. sunsetShades
+15. autumnTones
+16. oceanBlues
+17. burger
+18. christmas
+19. halloween
+
+Now, just rename `example-config.json` to `config.json`
 
 ## Usage
 
