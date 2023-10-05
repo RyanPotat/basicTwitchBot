@@ -13,6 +13,9 @@ const client = new ChatClient({
 client.use(new AlternateMessageModifier(client));
 client.use(new SlowModeRateLimiter(client, 10));
 client.connect();
-client.joinAll(config.channels);
+for (const channel of config.channels) {
+  await new Promise((resolve) => setTimeout(resolve, 600))
+  client.join(channel);
+}
 
 export { client };
