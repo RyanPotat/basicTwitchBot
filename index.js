@@ -34,11 +34,11 @@ client.on('PRIVMSG', async (msg) => {
 });
 
 // basic loop for farming chatbots
-setTimeout(() => {
+setInterval(() => {
   client.say('<farming_channel>', '<farming_message>');
 }, 24 * 60 * 60 * 1000); // interval: hours, minutes, seconds, milliseconds
 
 // example: farm cookies every 2 hours
-setTimeout(() => {
+setInterval(() => {
   client.say('<your_channel>', '!cookie');
 }, 2 * 60 * 60 * 1000);
