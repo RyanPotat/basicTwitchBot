@@ -32,7 +32,7 @@ export const changeColor = async (colorRaw) => {
   const colorIndex = colorArray.findIndex((setColor) => setColor === hexColor);
   const finalIndex = colorIndex !== -1 ? colorIndex : 0;
   const newColor = colorArray[(finalIndex + 1) % colorArray.length];
-  console.log(newColor)
+
   try {
     const
       encodedColor = encodeURIComponent(newColor === null ? '#FF69B4' : newColor);
