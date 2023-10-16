@@ -18,4 +18,9 @@ for (const channel of config.channels) {
   client.join(channel);
 }
 
+client.on('JOIN', ({ channelName }) => {
+  console.log(`Joined #${channelName}`)
+});
+
+
 export { client };
