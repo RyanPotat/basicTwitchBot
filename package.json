@@ -2,7 +2,7 @@
   "name": "colorchanger",
   "type": "module",
   "scripts": {
-    "start": "node index.js",
+    "start": "node --no-warnings index.js",
     "dev": "eslint ./ & nodemon index.js",
     "lint": "eslint ./ & npx depcheck",
     "lint:fix": "eslint ./ --fix"
