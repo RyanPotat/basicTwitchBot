@@ -2,12 +2,13 @@
 
 A tiny personal chatbot to change your color every message.
 
+Something of a tutorial for using Javascript with @kararty/dank-twitch-irc
+
 ## Prerequisites
 
 Before you begin, ensure you have the following installed:
 
-- [Node.js](https://nodejs.org/) (LTS version recommended)
-- [npm](https://www.npmjs.com/) (Node Package Manager)
+- [Node.js](https://nodejs.org/) (LTS version recommended, >16.9.0 required)
 
 ## Installation
 
@@ -27,19 +28,13 @@ Open Command Prompt, Windows Powershell, or a similar terminal to enter the foll
 
 ## Configuration
 
-You'll need to configure the bot before you can use it. Open `example-config.json`:
-
-```bash
-nano example-config.json
-```
-
-And then enter the following:
+You'll need to configure the bot before you can use it. Open `example-config.json` and then enter the following:
 
 - `id` - Your Twitch user ID.
-- `username` - Your Twitch user login. Remember it must be lowercase!
-- `twitch_token` - [Twitch OAuth Token](https://twitchapps.com/tmi/) to generate an OAuth token for Twitch.
-- `helix_id` and `helix_token` - [Twitch Helix API Access](https://twitchtokengenerator.com/) to generate your Twitch Helix API access token and client ID.
-- `channels` - A list of channels to join. Keep in mind the usernames must be lowercase!
+- `username` - Your Twitch user login.
+- `helix_id` and `access_token` - [Twitch Helix API Access](https://twitchtokengenerator.com/) to generate your Twitch Helix API access token and client ID.
+- `channels` - A list of channels to join.
+- `whitelist_channels` - A list of channels whitelisted to use commands.
 - `color_set` - Choose from the `colors.json` list to find a color set to your liking, or create your own unique set of colors. Defaults to the standard Twitch colors. Keep in mind you must have Turbo or Prime to use anything other than the standard Twitch colors.
 
 Available color sets:
@@ -64,6 +59,18 @@ Available color sets:
 19. halloween
 
 Now, just rename `example-config.json` to `config.json`
+
+You could do this from command line with:
+
+Windows:
+```bash
+copy example-config.js config.js
+```
+
+Linux:
+```bash
+cp example-config.js config.js
+```
 
 ## Usage
 
@@ -102,4 +109,11 @@ To stop the application:
 pm2 stop index.js
 ```
 
+## Formatting:
+
+If you've made changes and want to reformat the code, you can run lint with:
+
+```bash
+npm run lint:fix
+```
 

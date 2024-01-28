@@ -1,6 +1,7 @@
 import config from '../config.json' assert { type: 'json' };
-import colors from '../colors.json' assert { type: 'json' };
+//import colors from '../colors.json' assert { type: 'json' };
 
+const colors = await import('../colors.json', { assert: { type: 'json' } });
 const hexToColor = {
   '#0000FF': 'blue',
   '#8A2BE2': 'blue_violet',
@@ -40,11 +41,13 @@ export const changeColor = async (colorRaw) => {
       method: 'PUT',
       headers: {
         'Client-ID': config.helix_id,
-        authorization: `Bearer ${config.helix_token}`
+        authorization: `Bearer ${config.access_token}`
       }
     };
     const url = `chat/color?user_id=${config.id}&color=${encodedColor}`;
     const response = await fetch('https://api.twitch.tv/helix/' + url, options);
+
+    // Return error to console if unsuccessful
     if (response.status !== 204) { console.error(await response.json()); }
   } catch (e) {
     console.error(e);
@@ -52,3 +55,5 @@ export const changeColor = async (colorRaw) => {
     cooldown = false;
   }
 };
+
+export const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));

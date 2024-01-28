@@ -1,13 +1,15 @@
 {
-    "id": "123456",
-    "username": "forsen",
-    "twitch_token": "https://twitchapps.com/tmi/",
+    "id": "123456789",
+    "username": "your_username",
+    "access_token": "https://twitchtokengenerator.com/",
     "helix_id": "https://twitchtokengenerator.com/",
-    "helix_token": "https://twitchtokengenerator.com/",
     "channels": [
         "your_channel",
         "forsen",
         "xqc"
+    ],
+    "whitelist_channels": [
+        "your_channel"
     ],
     "color_set": "twitch_basic"
 }

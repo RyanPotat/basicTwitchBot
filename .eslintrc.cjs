@@ -16,9 +16,15 @@ module.exports = {
         '@babel/plugin-syntax-import-assertions'
       ],
     },
+    ecmaVersion: 2023,
+    sourceType: 'module'
   },
   rules: {
-    "no-console": "off"
-  },
-
+    "no-console": "off",
+    "await-in-loop": "off",
+    "no-restricted-syntax": "off",
+    "consistent-return": "off",
+    "no-promise-executor-return": "off",
+    "no-await-in-loop": "off",
+  }
 };
