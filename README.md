@@ -9,6 +9,7 @@ Something of a tutorial for using Javascript with @kararty/dank-twitch-irc
 Before you begin, ensure you have the following installed:
 
 - [Node.js](https://nodejs.org/) (LTS version recommended, >16.9.0 required)
+- [git](https://github.com/git-guides/install-git) 
 
 ## Installation
 
