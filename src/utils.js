@@ -1,7 +1,6 @@
 import config from '../config.json' assert { type: 'json' };
-//import colors from '../colors.json' assert { type: 'json' };
+import colors from '../colors.json' assert { type: 'json' };
 
-const colors = await import('../colors.json', { assert: { type: 'json' } });
 const hexToColor = {
   '#0000FF': 'blue',
   '#8A2BE2': 'blue_violet',
