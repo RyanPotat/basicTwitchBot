@@ -65,12 +65,12 @@ You could do this from command line with:
 
 Windows:
 ```bash
-copy example-config.js config.js
+copy example-config.json config.json
 ```
 
 Linux:
 ```bash
-cp example-config.js config.js
+cp example-config.json config.json
 ```
 
 ## Usage
