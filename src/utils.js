@@ -1,5 +1,5 @@
-import config from '../config.json' assert { type: 'json' };
-import colors from '../colors.json' assert { type: 'json' };
+import config from '../config.json' with { type: 'json' };
+import colors from '../colors.json' with { type: 'json' };
 
 const hexToColor = {
   '#0000FF': 'blue',
@@ -47,7 +47,9 @@ export const changeColor = async (colorRaw) => {
     const response = await fetch('https://api.twitch.tv/helix/' + url, options);
 
     // Return error to console if unsuccessful
-    if (response.status !== 204) { console.error(await response.json()); }
+    if (response.status !== 204) { 
+      console.error(await response.json()); 
+    }
   } catch (e) {
     console.error(e);
   } finally {

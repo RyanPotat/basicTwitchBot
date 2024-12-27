@@ -1,6 +1,6 @@
 import { client } from './src/client.js';
 import { changeColor } from './src/utils.js';
-import config from './config.json' assert { type: 'json' };
+import config from './config.json' with { type: 'json' };
 
 /**
  * @typedef {import('@kararty/dank-twitch-irc').PrivmsgMessage} PrivmsgMessage
@@ -28,13 +28,17 @@ client.on('PRIVMSG', async (msg) => {
   if (msg.senderUserID === config.id) changeColor(msg.colorRaw);
 
   // Basic chatbot response example
-  if (msg.channelName === 'channel_to_farm_in'
-        && msg.senderUsername === 'DeepDankDungeonBot') {
+  if (
+    msg.channelName === 'channel_to_farm_in' && 
+    msg.senderUsername === 'DeepDankDungeonBot'
+  ) {
     return client.say(msg.channelName, '+join');
   }
 
   // Ignore messages from non-whitelisted channels, to run commands
-  if (!config.whitelist_channels.includes(msg.senderUsername.toLowerCase())) return;
+  if (!config.whitelist_channels.includes(msg.senderUsername.toLowerCase())) {
+    return;
+  }
 
   // Example possible usage for a command
   if (msg.messageText.startsWith('!info')) {
@@ -54,11 +58,13 @@ client.on('PRIVMSG', async (msg) => {
 
     // Perform some action on those args, such as:
     const response = await fetch(
-      `https://api.ivr.fi/v2/twitch/user?login=${args[0]}`
+      `https://api.ivr.fi/v2/twitch/user?login=${encodeURIComponent(args[0])}`
     );
 
     // Return error to console if unsuccessful
-    if (!response.ok) console.error(`HTTP error! status: ${response.status}`);
+    if (!response.ok) {
+      console.error(`HTTP error! status: ${response.status}`);
+    }
 
     // Parse the response as JSON
     const data = await response.json();
